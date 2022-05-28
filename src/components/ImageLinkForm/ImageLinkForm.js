@@ -1,9 +1,17 @@
 import React from 'react'
 
-const ImageLinkForm = ({handleChange, handleSubmit}) => {
+const ImageLinkForm = ({user, handleChange, handleSubmit}) => {
   return (
     <div className='w-full h-full flex flex-col justify-start items-center pt-16 gap-4'>
-        <p className='w-2/3 text-center py-4
+        <span className='text-center'>
+            Hello, 
+            <span className='text-indigo-500 font-bold'>{` ${user.username}`}</span>
+            !
+            <br/>
+            Your current rank is
+            <span className='text-indigo-700'>{` ${user.entries}`}</span>
+        </span>
+        <p className='w-3/4 text-center py-4
             sm:2/3 md:w-3/5 lg:w-1/2'>
             The Magic Brain will detect faces in your pictures. Give it a try!
         </p>
